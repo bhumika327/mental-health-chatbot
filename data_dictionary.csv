@@ -1,0 +1,8 @@
+Column Name,Data Type,Description
+session_id,String,Unique identifier for each user conversation session.
+turn_id,Integer,Sequential turn number within the user session.
+user_query,String,Text input provided by the user seeking emotional support or guidance.
+detected_emotion,String,Primary emotional state classified from the user query.
+crisis_flag,Binary (0/1),"Flag indicating whether acute crisis or self-harm keywords were detected (1 = Yes, 0 = No)."
+guardrail_triggered,Binary (0/1),"Flag indicating whether rule-based safety guardrails intervened (1 = Yes, 0 = No)."
+response_time_ms,Integer,Latency of the chatbot response in milliseconds.
