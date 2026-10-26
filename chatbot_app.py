@@ -29,7 +29,7 @@ def chat_endpoint(req: ChatRequest):
     msg_lower = req.message.lower()
     
     # Rule-based guardrail check for crisis
-    crisis_detected = any(keyword in msg_lower for keyword in CRISISIS_KEYWORDS)
+    crisis_detected = any(keyword in msg_lower for keyword in CRISIS_KEYWORDS)
     guardrail_triggered = False
     
     if crisis_detected:
