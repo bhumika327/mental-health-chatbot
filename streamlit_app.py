@@ -40,7 +40,7 @@ if prompt := st.chat_input("How are you feeling today?"):
     msg_lower = prompt.lower()
     
     # Rule-based guardrail crisis check
-    crisis_detected = any(keyword in msg_lower for keyword in CRISISIS_KEYWORDS if "guardrail" not in keyword)
+    crisis_detected = any(keyword in msg_lower for keyword in CRISIS_KEYWORDS if "guardrail" not in keyword)
     crisis_detected = any(kw in msg_lower for kw in ["suicide", "kill myself", "end my life", "hurt myself", "die", "ending everything", "harm"])
     
     if crisis_detected:
